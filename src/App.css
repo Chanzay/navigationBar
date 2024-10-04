@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+.navContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 2px;
+    background-color: palevioletred;
+    height: 4rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.linkTab{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.tab{
+    text-decoration: none;
+    padding: 10px;
+}
+.tab:visited{
+    color: white;
+}
+.tab:hover{
+    background-color: pink;
+    opacity: 80%;
+    border-radius: 10px;
+    text-align: start;
+}
+.tab:active{
+    opacity: 400%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo{
+    width: 3rem;
+    padding: 2px;
+}
+.logoContent{
+    display: flex;
+    flex-direction: row;
+}
+.logoContent button{
+    background-color: palevioletred;
+    width: 4rem;
+    height: 2rem;
+    border: palevioletred;
+    display: none;
+    position: absolute;
+    left: 90%;
+}
+
+.brand{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 5px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+.navContainer button:hover{
+    opacity: 60%;
+}
+.navContainer button:active{
+    opacity: 200%;
+}
+
+@media (max-width: 768px) {
+    .navContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .logoContent button{
+        display: inline;
+    }
+   
+    
+    .linkTab{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: palevioletred;
+        justify-content: left;
+        font-size: 2rem;
+        display: none;
+    }
+    .linkTabActive{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: palevioletred;
+        justify-content: left;
+        font-size: 2rem;
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
